@@ -6,10 +6,11 @@ bp = Blueprint('book', __name__)
 
 @bp.route('/')
 def index():
-    data = Book.query.all()
+    #data = Book.query.all()
     # books_list = [book.to_dict() for book in data]
     # return jsonify(books_list)
-    return render_template('books/index.html', data=data)
+    #return render_template('books/index.html', data=data)
+    return "Entra a libros"
 
 @bp.route('/add', methods=['GET', 'POST'])
 def add():
