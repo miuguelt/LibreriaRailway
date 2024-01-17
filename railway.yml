@@ -1,7 +1,7 @@
 # railway.yml
 name: my-python-app
 services:
-  - env: python=3.9
+  - env: python=3.8
     install:
-      - python3.9 -m pip install --upgrade pip && pip install -r requirements.txt
+      - python3.8 -m pip install -r requirements.txt
     run: python3.9 run.py
