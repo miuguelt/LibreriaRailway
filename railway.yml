@@ -15,7 +15,7 @@ services:
     builder: python-builder
     env:
       PYTHON_VERSION: "3.8"
-      DATABASE_URL: "mysql+mysqlclient://root:2hefbFfDEc-HFd1fhc2DhBCCgh-HCB65@monorail.proxy.rlwy.net:20020/Libreria1"
+      DATABASE_URL: "mysql://root:2hefbFfDEc-HFd1fhc2DhBCCgh-HCB65@monorail.proxy.rlwy.net:20020/Libreria1"
     env_file: .env
 
 # Base de datos MySQL
