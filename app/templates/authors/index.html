@@ -23,11 +23,14 @@
                 <td>{{ author.nacionalidad }}</td>
                 <td>
                     <a href="{{ url_for('author.edit', id=author.id) }}">Editar</a>
+                    <a href="{{ url_for('author.delete', id=author.id) }}">Eliminar</a>
                     <!-- Agrega aquí el enlace para eliminar -->
                 </td>
             </tr>
         {% endfor %}
     </table>
-    <a href="{{ url_for('author.add') }}">Agregar Libro</a>
+    <a href="{{ url_for('author.add') }}">Agregar Autor</a>
+    <br>
+    <a href="{{ url_for('book.index') }}">Ir a Libro</a>
 </body>
 </html>

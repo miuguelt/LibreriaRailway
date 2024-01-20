@@ -21,7 +21,7 @@ def add():
         db.session.add(new_author)
         db.session.commit()
         
-        return redirect(url_for('authors/author.index'))
+        return redirect(url_for('author.index'))
 
     return render_template('authors/add.html')
 
@@ -30,8 +30,8 @@ def edit(id):
     author = Author.query.get_or_404(id)
 
     if request.method == 'POST':
-        nombre = request.form['nombre']
-        nacionalidad = request.form['nacionalidad']
+        author.nombre = request.form['nombre']
+        author.nacionalidad = request.form['nacionalidad']
         db.session.commit()
         return redirect(url_for('author.index'))
 
